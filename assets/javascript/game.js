@@ -4,6 +4,7 @@
 var wordArray = ["metallica", "sabath", "black", "guns", "roses"];
 var wordSelected;
 var underscoreWord = [];
+var underscoreWordJoined = underscoreWord.join(' ');
 var guessedLetters = [];
 var updateGuessedLetters = true;
 var guessesLeft = 10;
@@ -32,10 +33,12 @@ function newGame() {
         underscoreWord[i] = "_";
     }
 
+    // underscoreWord.join(' ');
     underscoreWordText.textContent = underscoreWord.toString();
     guessesLeftText.textContent = "Guesses left: " + guessesLeft;
     guessedLettersText.textContent = "Letters guessed: " + guessedLetters;
     console.log(wordSelected);
+    
 }
 
 
@@ -65,7 +68,7 @@ document.onkeyup = function(event) {
                 updateGuessedLetters = false;
             }
         }
-        console.log("updateGuessedLetter: " + updateGuessedLetters);
+        // console.log("updateGuessedLetter: " + updateGuessedLetters);
         
         // Update the first incorrect guess
         if (updateGuessedLetters == true) {
@@ -91,10 +94,13 @@ document.onkeyup = function(event) {
             }
         }
         updateGuessedLetters = true;
-        console.log("Guessed Letters: " + guessedLetters);
+        // console.log("Guessed Letters: " + guessedLetters);
+        // underscoreWord.join(' ');
         underscoreWordText.textContent = "Word: " + underscoreWord.toString();
         guessedLettersText.textContent = "Letters guessed: " + guessedLetters.toString();
         guessesLeftText.textContent = "Guesses left: " + guessesLeft;
+        console.log("underscoreWord: " + underscoreWord);
+        console.log("no spaces: " + underscoreWordJoined);
 
         
     }
@@ -118,12 +124,16 @@ document.onkeyup = function(event) {
     if (guessesLeft === 0) {
         newGame();
     }
-    console.log("wins: " + wins);
+    // console.log("wins: " + wins);
     winsText.textContent = "Wins: " + wins;
     // console.log("underscoreWord: " + underscoreWord);
 
 
 }
+
+// TODO: Create picture for when user wins
+// TODO: Possibly include song sample when correct
+
 
 
 
