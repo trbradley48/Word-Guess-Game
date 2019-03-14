@@ -10,6 +10,26 @@
     <link href="https://fonts.googleapis.com/css?family=New+Rocker" rel="stylesheet">
     <title>Word Guessing Game</title>
 
+    <audio id="metallicaSound">
+        <source src="assets/sounds/Metallica - Enter Sandman [Official Music Video].mp3" type="audio/mp3">
+    </audio>
+    <audio id="blacksabbathSound">
+        <source src="assets/sounds/Sabbra Cadabra (2014 Remaster).mp3" type="audio/mp3">
+    </audio>
+    <audio id="gunsnrosesSound">
+        <source src="assets/sounds/Guns N' Roses - Sweet Child O' Mine (Official Music Video).mp3" type="audio/mp3">
+    </audio>
+    <audio id="acdcSound">
+        <source src="assets/sounds/ACDC - Thunderstruck (Official Music Video).mp3" type="audio/mp3">
+    </audio>
+    <audio id="bostonSound">
+        <source src="assets/sounds/Boston - Peace of Mind (Boston) HQ.mp3" type="audio/mp3">
+    </audio>
+    <audio id="ironmaidenSound">
+        <source src="assets/sounds/Iron Maiden - The Trooper.mp3" type="audio/mp3">
+    </audio>
+
+
 </head>
 <body>
     
@@ -33,12 +53,15 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bodyContentMargins">
                 <div class="bodyContent">
-                    <p id="directions-text">Press any key to get started!</p>
+                    <p id="directions-text">Press any key to get started! (turn your speakers on)</p>
                     <p id="userGuess-text"></p>
                     <p id="underscoreWord-text"></p>
                     <p id="guessedLetters-text"></p>
                     <p id="guessesLeft-text"></p>
                     <p id="wins-text"></p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="pictureMargins">
+                    <img class="bandImage">
                 </div>
             </div>
         </div>
